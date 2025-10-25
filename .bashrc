@@ -15,15 +15,12 @@ alias ..='cd ..'
 alias py='python'
 alias doc='cd ~/Documents/'
 alias dow='cd ~/Downloads/'
+alias nterm='nvim -c terminal'
 
 ### Git aliases
 alias gl='git log'
 alias gs='git status'
 alias gc='git commit'
 alias ga='git add'
-alias nterm='nvim -c terminal'
-
 
 PS1='[ \u \[\e[31m\]\w\[\e[0m\] ]$ '
-
-alias re='tmux source ~/.config/tmux/tmux.conf'

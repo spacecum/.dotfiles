@@ -1,4 +1,3 @@
--- Swtiching between windows
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
@@ -37,6 +36,6 @@ vim.api.nvim_set_keymap('n', '<M-r>', ':w | split | resize 16 | terminal make <C
 vim.keymap.set('v', 'gs', function()
 	vim.cmd('normal! "vy')
 	local text = vim.fn.getreg('v')
-	text = text:gsub('%s+', '%%20')
+	text = text:gsub("%s+", '%%20')
 	vim.fn.jobstart({ 'xdg-open', 'https://www.google.com/search?q=' .. text }, { detach = true })
 end, { noremap = true, silent = true })

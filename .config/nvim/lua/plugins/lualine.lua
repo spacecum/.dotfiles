@@ -1,11 +1,11 @@
 return {
 	'nvim-lualine/lualine.nvim',
 	config = function ()
-		vim.o.laststatus = 3 -- Enabling global status line
 		require('lualine').setup({
 			options = {
-				component_separators = { left = '', right = ''},
-				section_separators = { left = '', right = ''},
+				globalstatus = true,
+				component_separators = { left = ' ▏', right = ' ▏'},
+				section_separators = { left = ' ▏', right = ' ▏'},
 			},
 			sections = {
 				lualine_a = {
@@ -24,7 +24,6 @@ return {
 					}
 				},
 			},
-		}
-		)
+		})
 	end
 }

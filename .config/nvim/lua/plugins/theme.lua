@@ -10,5 +10,6 @@ return {
 				saturation = 0.8
 			})
 		end
-	}
+	},
+
 }
