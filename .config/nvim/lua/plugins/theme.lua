@@ -7,9 +7,9 @@ return {
 			require("cyberdream").setup({
 				transparent = true,
 				cache = true,
-				saturation = 0.8
+				saturation = 0.8,
+				italic_comments = true,
 			})
 		end
 	},
-
 }

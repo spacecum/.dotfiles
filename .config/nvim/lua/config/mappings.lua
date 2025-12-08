@@ -26,8 +26,8 @@ vim.api.nvim_set_keymap('n', '<CR>', 'i<CR><Esc>', { noremap = true, silent = tr
 vim.api.nvim_set_keymap('i', '<C-BS>', '<C-W>', { noremap = true, silent = true })
 
 -- Move
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+-- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Make
 vim.api.nvim_set_keymap('n', '<M-r>', ':w | split | resize 16 | terminal make <CR>', { noremap = true, silent = true })

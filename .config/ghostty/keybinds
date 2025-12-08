@@ -45,10 +45,10 @@ keybind = ctrl+m=toggle_maximize
 keybind = ctrl+shift+c=text:\x03
 
 # Delete word
-#keybind = ctrl+backspace=text:\x17
+# keybind = ctrl+backspace=text:\x17
 
 # scroll up and down
-keybind = alt+f=scroll_page_down
-keybind = alt+b=scroll_page_up
-keybind = alt+e=scroll_page_lines:1
-keybind = alt+y=scroll_page_lines:-1
+# keybind = alt+f=scroll_page_down
+# keybind = alt+b=scroll_page_up
+# keybind = alt+e=scroll_page_lines:1
+# keybind = alt+y=scroll_page_lines:-1

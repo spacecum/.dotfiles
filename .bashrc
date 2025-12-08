@@ -10,7 +10,7 @@ alias vim=nvim
 alias fzf='fzf --preview "bat --color=always {}" | xargs -I + nvim +'
 alias ll='ls -lA'
 alias sudo='sudo '
-alias info='info --vi-keys'
+alias info='info'
 alias ..='cd ..'
 alias py='python'
 alias doc='cd ~/Documents/'
@@ -22,5 +22,7 @@ alias gl='git log'
 alias gs='git status'
 alias gc='git commit'
 alias ga='git add'
+
+alias weather="curl wttr.in/Delhi"
 
 PS1='[ \u \[\e[31m\]\w\[\e[0m\] ]$ '
