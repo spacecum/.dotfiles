@@ -1,3 +1,14 @@
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd beep extendedglob nomatch notify
+bindkey -v
+zstyle :compinstall filename '/home/Mani/.zshrc'
+
+autoload -Uz compinit
+compinit
+
+
 export EDITOR=nvim
 export VISUAL=nvim
 export MANPAGER="nvim +Man!"
@@ -23,6 +34,7 @@ alias gs='git status'
 alias gc='git commit'
 alias ga='git add'
 
-alias weather="curl wttr.in/Delhi"
+alias weather="curl wttr.in/India"
 
-PS1='[ \u \[\e[31m\]\w\[\e[0m\] ]$ '
+PROMPT="[ %n %F{red}%~%f ]%(!.#.$) "
+RPROMPT="[ %F{green}%?%f | %F{blue}%h%f ]"
