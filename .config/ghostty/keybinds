@@ -1,25 +1,27 @@
+# Vim mode for ghostty is just around the corner. Just wait.
+
 # Delete default keybindings
 keybind=clear
 
-# Open config
-keybind=ctrl+comma=open_config
-## Splits
+# Splits
+keybind = ctrl+s>h=new_split:left
+keybind = ctrl+s>j=new_split:down
+keybind = ctrl+s>k=new_split:up
+keybind = ctrl+s>l=new_split:right
+
+keybind = ctrl+s>equal=equalize_splits
+
+keybind = ctrl+shift+h=resize_split:left,10
+keybind = ctrl+shift+j=resize_split:down,10
+keybind = ctrl+shift+k=resize_split:up,10
+keybind = ctrl+shift+l=resize_split:right,10
+
 keybind = performable:ctrl+h=goto_split:left
 keybind = performable:ctrl+j=goto_split:bottom
 keybind = performable:ctrl+k=goto_split:top
 keybind = performable:ctrl+l=goto_split:right
 
-keybind = ctrl+s>h=new_split:right
-keybind = ctrl+s>j=new_split:down
-keybind = ctrl+s>l=new_split:left
-keybind = ctrl+s>k=new_split:up
-
-# Tab and window management
-keybind = ctrl+t=new_tab
-keybind = ctrl+n=new_window
-keybind = ctrl+w=close_surface
-
-# Navigation between tabs
+# Navigation between tabs and windows
 keybind = alt+one=goto_tab:1
 keybind = alt+two=goto_tab:2
 keybind = alt+three=goto_tab:3
@@ -33,22 +35,26 @@ keybind = alt+nine=last_tab
 keybind = ctrl+tab=next_tab
 keybind = ctrl+shift+tab=previous_tab
 
+# scroll up and down
+# As for now ghostty doesn't support performable with sroll_*. When it starts
+# supporting this feature this shouldn't interfear with neovim.
+# keybind = performable:ctrl+f=scroll_page_down
+# keybind = performable:ctrl+b=scroll_page_up
+# keybind = performable:ctrl+e=scroll_page_lines:1
+# keybind = performable:ctrl+y=scroll_page_lines:-1
+
 # Copy and paste
-keybind = ctrl+c=copy_to_clipboard
+keybind = performable:ctrl+c=copy_to_clipboard
 keybind = ctrl+v=paste_from_clipboard
 
-# Misc
-keybind = ctrl+shift+comma=reload_config
+# Tab and window management
+keybind = ctrl+s>t=new_tab
+keybind = ctrl+s>n=new_window
+
 keybind = ctrl+m=toggle_maximize
+keybind = alt+k=close_surface
+keybind = performable:ctrl+r=clear_screen
 
-# SIGINT
-keybind = ctrl+shift+c=text:\x03
-
-# Delete word
-# keybind = ctrl+backspace=text:\x17
-
-# scroll up and down
-# keybind = alt+f=scroll_page_down
-# keybind = alt+b=scroll_page_up
-# keybind = alt+e=scroll_page_lines:1
-# keybind = alt+y=scroll_page_lines:-1
+# Configuration
+keybind = ctrl+comma=open_config
+keybind = ctrl+shift+comma=reload_config
