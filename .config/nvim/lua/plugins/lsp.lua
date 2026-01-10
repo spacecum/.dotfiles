@@ -16,6 +16,19 @@ return {
 		end
 	},
 
+
 	{ 'williamboman/mason-lspconfig.nvim' },
-	{ 'neovim/nvim-lspconfig' }
+	{
+		'neovim/nvim-lspconfig',
+
+		vim.lsp.config('bashls', {
+				settings = {
+					bashIde = {
+						globPattern = "*@(.sh|.inc|.bash|.command|.zsh)"
+					}
+
+				}
+			}
+		)
+	}
 }

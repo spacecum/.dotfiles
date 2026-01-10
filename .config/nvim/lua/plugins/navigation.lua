@@ -28,7 +28,12 @@ return {
 		-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
 		lazy = false,
 		config = function ()
-			require("oil").setup()
+			require("oil").setup({
+				keymaps = {
+					["<M-v>"] = { "actions.select", opts = { vertical = true } },
+					["<M-h>"] = { "actions.select", opts = { horizontal = true } },
+				}
+			})
 			vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 		end
 	}

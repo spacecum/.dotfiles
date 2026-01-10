@@ -1,8 +1,13 @@
 theme = Builtin Tango Dark
 background-opacity = 0.8
 
+# Only supported on some linux desktops.
+# background-blur = true
+
 font-feature = -calt
-font-family = JetBrainsMono Nerd Font
+font-family = JetBrainsMono Nerd Font 
+# font-family-bold = JetBrainsMono NF Bold
+# font-family-italic = JetBrainsMono NF Italic
 
 gtk-titlebar = false
 

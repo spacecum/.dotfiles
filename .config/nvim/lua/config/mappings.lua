@@ -7,15 +7,11 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true 
 -- Save
 vim.api.nvim_set_keymap('n', '<M-w>', ':w<CR>', { noremap = true, silent = true })
 
--- Split
-vim.api.nvim_set_keymap('n', '<M-h>', ':sp<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-v>', ':vsp<CR>', { noremap = true, silent = true })
-
 -- Remove highlight after searching
 vim.api.nvim_set_keymap('n', '<C-[>', ':nohl<CR>', { noremap = true, silent = true })
 
 -- Open terminal
-vim.api.nvim_set_keymap('n', '<M-k>', ':sp | resize 16 | term<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<M-t>', ':sp | resize 16 | term<CR>', { noremap = true, silent = true })
 
 -- Exit terminal mode and go to normal mode when pressing Esc
 vim.api.nvim_set_keymap('t', '<c-[>', '<C-\\><C-n>', { noremap = true, silent = true })

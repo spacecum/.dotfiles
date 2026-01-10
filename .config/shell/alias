@@ -1,0 +1,34 @@
+#!/bin/sh
+
+alias ls='ls --color=auto'
+alias ll='ls -lA'
+alias grep='grep --color=auto'
+alias tree='tree -C'
+alias echo='echo -e'
+
+alias rm='rm -v'
+alias mv='mv -v'
+alias cp='cp -v'
+
+alias vim='nvim'
+alias vi=vim
+alias nv=vim
+alias nterm='nvim -c terminal'
+
+alias fzf='fzf --preview "bat --color=always {}" | xargs -I + nvim +'
+alias sudo='sudo '
+alias py='python'
+alias open='xdg-open'
+alias hist='history'
+alias man='man '
+
+alias rename='perl-rename'
+
+alias weather="curl wttr.in/"
+alias space='astroterm --speed 500 --fps 60 --unicode --metadata --color --constellations --city '
+
+alias -g CP='| xclip -selection c'
+
+cl() {
+	cd $1 && ls -A
+}

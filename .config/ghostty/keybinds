@@ -1,27 +1,46 @@
-# Vim mode for ghostty is just around the corner. Just wait.
-
 # Delete default keybindings
 keybind=clear
 
-# Splits
+# Vim mode for ghostty is just around the corner. Just wait.
+# keybind = alt+v=activate_key_table:vim
+
+# Configuration
+keybind = ctrl+comma=open_config
+keybind = ctrl+shift+comma=reload_config
+
+# Create splits, windows, and tabs
+keybind = ctrl+s>s=new_split:auto
 keybind = ctrl+s>h=new_split:left
 keybind = ctrl+s>j=new_split:down
 keybind = ctrl+s>k=new_split:up
 keybind = ctrl+s>l=new_split:right
 
+keybind = ctrl+s>t=new_tab
+keybind = ctrl+s>n=new_window
+
+# Manage splits
 keybind = ctrl+s>equal=equalize_splits
 
-keybind = ctrl+shift+h=resize_split:left,10
-keybind = ctrl+shift+j=resize_split:down,10
-keybind = ctrl+shift+k=resize_split:up,10
-keybind = ctrl+shift+l=resize_split:right,10
+keybind = ctrl+shift+h=resize_split:left,20
+keybind = ctrl+shift+j=resize_split:down,20
+keybind = ctrl+shift+k=resize_split:up,20
+keybind = ctrl+shift+l=resize_split:right,20
 
+# Window Management
+keybind = ctrl+s>m=toggle_maximize
+keybind = performable:ctrl+s>f=toggle_fullscreen
+keybind = alt+k=close_surface
+keybind = performable:ctrl+r=clear_screen
+
+# Navigating between splits and tabs
 keybind = performable:ctrl+h=goto_split:left
 keybind = performable:ctrl+j=goto_split:bottom
 keybind = performable:ctrl+k=goto_split:top
 keybind = performable:ctrl+l=goto_split:right
 
-# Navigation between tabs and windows
+keybind = performable:alt+d=next_tab
+keybind = performable:alt+a=previous_tab
+
 keybind = alt+one=goto_tab:1
 keybind = alt+two=goto_tab:2
 keybind = alt+three=goto_tab:3
@@ -32,29 +51,11 @@ keybind = alt+seven=goto_tab:7
 keybind = alt+eight=goto_tab:8
 keybind = alt+nine=last_tab
 
-keybind = ctrl+tab=next_tab
-keybind = ctrl+shift+tab=previous_tab
-
-# scroll up and down
-# As for now ghostty doesn't support performable with sroll_*. When it starts
-# supporting this feature this shouldn't interfear with neovim.
-# keybind = performable:ctrl+f=scroll_page_down
-# keybind = performable:ctrl+b=scroll_page_up
-# keybind = performable:ctrl+e=scroll_page_lines:1
-# keybind = performable:ctrl+y=scroll_page_lines:-1
-
 # Copy and paste
 keybind = performable:ctrl+c=copy_to_clipboard
-keybind = ctrl+v=paste_from_clipboard
+# keybind = performable:ctrl+v=paste_from_clipboard
 
-# Tab and window management
-keybind = ctrl+s>t=new_tab
-keybind = ctrl+s>n=new_window
-
-keybind = ctrl+m=toggle_maximize
-keybind = alt+k=close_surface
-keybind = performable:ctrl+r=clear_screen
-
-# Configuration
-keybind = ctrl+comma=open_config
-keybind = ctrl+shift+comma=reload_config
+# Font size
+keybind = ctrl+equal=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+zero=reset_font_size
