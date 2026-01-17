@@ -17,6 +17,9 @@ return {
 			local cmp = require('cmp')
 			local cmp_action = require('lsp-zero').cmp_action()
 			cmp.setup({
+				experimental = {
+					ghost_text = true
+				},
 				window = {
 					completion = cmp.config.window.bordered(),
 					documentation = cmp.config.window.bordered(),

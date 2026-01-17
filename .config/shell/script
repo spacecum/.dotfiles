@@ -1,0 +1,12 @@
+#!/bin/sh
+
+clone_or_source() {
+	if [ ! -e ~/.config/zsh/plugins/$2 ]; then
+		git clone $1 ~/.config/zsh/plugins/${1:t:s/.git//}
+	fi
+	source ~/.config/zsh/plugins/"$2"
+}
+
+cl() {
+	cd $1 && ls -A
+}

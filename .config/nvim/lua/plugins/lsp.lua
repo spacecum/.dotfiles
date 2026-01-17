@@ -20,13 +20,12 @@ return {
 	{ 'williamboman/mason-lspconfig.nvim' },
 	{
 		'neovim/nvim-lspconfig',
-
 		vim.lsp.config('bashls', {
+			filetypes = { 'bash', 'sh', 'zsh' },
 				settings = {
 					bashIde = {
 						globPattern = "*@(.sh|.inc|.bash|.command|.zsh)"
 					}
-
 				}
 			}
 		)

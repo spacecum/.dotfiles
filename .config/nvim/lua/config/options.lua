@@ -1,6 +1,6 @@
 -- Relative line number
-vim.opt.number = true
-vim.opt.relativenumber = true
+vim.o.number = true
+vim.o.relativenumber = true
 
 -- Tab size
 vim.o.tabstop = 3
@@ -12,15 +12,15 @@ vim.o.smartindent = true
 vim.o.clipboard = "unnamedplus"
 
 -- search settings
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
 -- cursor line
---vim.opt.cursorline = true
+--vim.o.cursorline = true
 
 -- split window
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+vim.o.splitright = true
+vim.o.splitbelow = true
 
 -- Theme
 vim.cmd[[colorscheme cyberdream]]
@@ -31,22 +31,26 @@ vim.opt.fillchars:append { eob = " " }
 --vim.o.signcolumn = 'no'
 
 -- undo across session
-vim.opt.undofile = true
+vim.o.undofile = true
 
 -- Removing space below statusline
-vim.opt.cmdheight = 0
+vim.o.cmdheight = 0
 
 -- Wordwrap
-vim.opt.linebreak = true
+vim.o.linebreak = true
 
 -- Enabling features in nvim-term
 vim.api.nvim_create_autocmd("TermOpen", {
-  pattern = "*",
-  callback = function()
-    vim.bo.modifiable = true
-    vim.opt_local.relativenumber = true
-    vim.opt_local.number = true
-    vim.opt_local.wrap = true
-    vim.opt_local.linebreak = true
-  end
+	callback = function()
+		vim.o.modifiable = true
+		vim.o.relativenumber = true
+		vim.o.number = true
+		vim.o.wrap = true
+		vim.o.linebreak = true
+	end
+})
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+	pattern = "/home/Mani/.dotfiles/.config/hypr/*.conf",
+	command = "!hyprctl reload"
 })

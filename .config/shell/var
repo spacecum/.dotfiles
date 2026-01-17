@@ -7,7 +7,7 @@ export MANPAGER="nvim +Man!"
 # Clean up
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
-export GNUPGHOME="$XDG_CACHE_HOME/gnupg"
+export GNUPGHOME="$XDG_CACHE_HOME"/gnupg
 
 # History
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
