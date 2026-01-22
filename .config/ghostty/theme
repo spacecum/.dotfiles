@@ -1,5 +1,5 @@
 theme = Builtin Tango Dark
-background-opacity = 0.5
+background-opacity = 0.8
 
 # Only supported on some linux desktops.
 # background-blur = true

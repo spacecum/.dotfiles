@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-clone_or_source() {
+plug() {
 	if [ ! -e ~/.config/zsh/plugins/$2 ]; then
 		git clone $1 ~/.config/zsh/plugins/${1:t:s/.git//}
 	fi
@@ -9,4 +9,11 @@ clone_or_source() {
 
 cl() {
 	cd $1 && ls -A
+}
+
+git_branch() {
+	gitbranch=$(git branch --show-current 2>/dev/null)
+	if [[ $gitbranch != "" ]]; then
+		echo "%F{033}git:(%F{048}${gitbranch}%f%F{033})%f "
+	fi
 }

@@ -55,6 +55,10 @@ return {
 	},
 
 	{
+		'tpope/vim-surround'
+	},
+
+	{
 		"abecodes/tabout.nvim",
 		lazy = false,
 		config = function ()

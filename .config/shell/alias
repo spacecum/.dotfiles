@@ -5,6 +5,7 @@ alias ll='ls -lA'
 alias grep='grep --color=auto'
 alias tree='tree -C'
 alias echo='echo -e'
+alias df='dysk'
 
 alias rm='rm -v'
 alias mv='mv -v'
@@ -24,12 +25,10 @@ alias hist='history'
 alias man='man '
 
 alias rename='perl-rename'
+unalias run-help
+alias help='run-help'
 
 alias weather="curl wttr.in/"
-alias space='astroterm --speed 500 --fps 60 --unicode --metadata --color --constellations --city '
+alias space='astroterm --speed 500 --fps 60 --unicode --metadata --color --city '
 
 alias -g CP='| xclip -selection c'
-
-cl() {
-	cd $1 && ls -A
-}

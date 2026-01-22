@@ -1,5 +1,3 @@
-#!/bin/sh
-
 [ -f  "$XDG_CONFIG_HOME/shell/alias" ] && source "$XDG_CONFIG_HOME/shell/alias"
 [ -f  "$XDG_CONFIG_HOME/shell/var" ] &&  source "$XDG_CONFIG_HOME/shell/var"
 [ -f  "$XDG_CONFIG_HOME/shell/script" ] &&  source "$XDG_CONFIG_HOME/shell/script"
@@ -13,23 +11,26 @@ setopt autocd beep interactive_comments # General
 setopt extendedglob nomatch notify kshglob globdots # Globbing
 setopt append_history inc_append_history share_history # History
 setopt menu_complete # Autocomplete menu
-
-zstyle :compinstall filename "$XDG_CONFIG_HOME/.zshrc"
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':fzf-tab:*' use-fzf-default-opts yes
+setopt PROMPT_SUBST
+# setopt PROMPT_CR
 
 autoload -Uz colors && colors
 autoload -U compinit && compinit
 autoload -Uz edit-command-line
+autoload -Uz run-help  
+
+# Set up the prompt (with git branch name)
+zstyle :compinstall filename "$XDG_CONFIG_HOME/.zshrc"
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
  
 # Add support for vim keybindings
 zle -N edit-command-line
 bindkey '^E' edit-command-line
 
-# Add syntax highlighting
+PROMPT='
+[ %(!.%F{red}%n%f.%F{039}%n%f) ] %F{red}%~%f $(git_branch)%F{119}%?%f %F{105}%h%f
+%# '
 
-PROMPT="[ %n %F{red}%~%f ]%(!.#.$) "
-RPROMPT="[ %F{green}%?%f | %F{blue}%h%f ]"
-
-clone_or_source https://github.com/zsh-users/zsh-syntax-highlighting.git zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-clone_or_source https://github.com/Aloxaf/fzf-tab fzf-tab/fzf-tab.plugin.zsh
+plug https://github.com/zsh-users/zsh-syntax-highlighting.git zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+plug https://github.com/Aloxaf/fzf-tab fzf-tab/fzf-tab.plugin.zsh

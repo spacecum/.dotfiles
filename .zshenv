@@ -1,4 +1,6 @@
-#!/bin/sh
+export EDITOR=nvim
+export VISUAL=nvim
+export MANPAGER="nvim +Man!"
 
 # Set XDG base directories
 export XDG_STATE_HOME="$HOME/.local/state/"

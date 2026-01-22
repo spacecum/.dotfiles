@@ -39,18 +39,5 @@ vim.o.cmdheight = 0
 -- Wordwrap
 vim.o.linebreak = true
 
--- Enabling features in nvim-term
-vim.api.nvim_create_autocmd("TermOpen", {
-	callback = function()
-		vim.o.modifiable = true
-		vim.o.relativenumber = true
-		vim.o.number = true
-		vim.o.wrap = true
-		vim.o.linebreak = true
-	end
-})
-
-vim.api.nvim_create_autocmd("BufWritePost", {
-	pattern = "/home/Mani/.dotfiles/.config/hypr/*.conf",
-	command = "!hyprctl reload"
-})
+-- Minimum number of lines to keep above and below the cursor
+vim.o.scrolloff = 10
