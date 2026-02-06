@@ -4,13 +4,12 @@ background-opacity = 0.8
 # Only supported on some linux desktops.
 # background-blur = true
 
-font-feature = -calt
+# font-feature = -calt
 font-family = JetBrainsMono Nerd Font 
 
 gtk-titlebar = false
 
 shell-integration-features = no-cursor
-shell-integration = detect
 
 cursor-style = block
 cursor-style-blink = false

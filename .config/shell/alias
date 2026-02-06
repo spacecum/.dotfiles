@@ -11,24 +11,23 @@ alias rm='rm -v'
 alias mv='mv -v'
 alias cp='cp -v'
 
-alias vim='nvim'
-alias vi=vim
-alias nv=vim
-alias nterm='nvim -c terminal'
+alias v='nvim'
+alias nt='nvim -c terminal'
 
-alias fzf='fzf --preview "bat --color=always {}" --bind "enter:become(nvim {})"'
-# | xargs -I + nvim +'
+alias f='fzf --bind "enter:become(nvim {})"'
 alias sudo='sudo '
 alias py='python'
-alias open='xdg-open'
+alias o='xdg-open'
+alias y='yazi'
 alias hist='history'
 alias man='man '
+alias diff='diff --color'
 
 alias rename='perl-rename'
 unalias run-help
 alias help='run-help'
 
 alias weather="curl wttr.in/"
-alias space='astroterm --speed 500 --fps 60 --unicode --metadata --color --city '
+alias space='astroterm --fps 60 --unicode --metadata --color --city '
 
-alias -g CP='| xclip -selection c'
+alias -g CP='| wl-copy'

@@ -29,8 +29,8 @@ keybind = ctrl+shift+l=resize_split:right,20
 # Window Management
 keybind = ctrl+s>m=toggle_maximize
 keybind = performable:ctrl+s>f=toggle_fullscreen
-keybind = ctrl+q=close_surface
-keybind = performable:ctrl+r=clear_screen
+keybind = ctrl+s>d=close_surface
+# keybind = performable:ctrl+r=clear_screen
 
 # Navigating between splits and tabs
 keybind = performable:ctrl+h=goto_split:left

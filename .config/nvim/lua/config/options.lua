@@ -23,12 +23,12 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 
 -- Theme
-vim.cmd[[colorscheme cyberdream]]
+-- vim.cmd[[colorscheme cyberdream]]
 
 -- Removing ~
 vim.opt.fillchars:append { eob = " " }
 
---vim.o.signcolumn = 'no'
+-- vim.o.signcolumn = 'yes'
 
 -- undo across session
 vim.o.undofile = true
@@ -40,4 +40,7 @@ vim.o.cmdheight = 0
 vim.o.linebreak = true
 
 -- Minimum number of lines to keep above and below the cursor
-vim.o.scrolloff = 10
+-- vim.o.scrolloff = 999
+
+-- change the cwd inside of the nvim
+vim.o.autochdir = true

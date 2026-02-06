@@ -16,7 +16,9 @@ export GDBHISTFILE="$XDG_DATA_HOME"/gdb/history
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 
-# Xorg
-export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverrc
-export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export HELPDIR=/usr/share/zsh/${ZSH_VERSION}/help
+export SYSTEMD_PAGERSECURE=1
+export PAGER=bat
+
+export FZF_DEFAULT_OPTS='--color=16' # --preview "bat --color=always {}"'
+# export FZF_DEFAULT_OPTS='--color=16 --preview "chafa -s 50 {}"'

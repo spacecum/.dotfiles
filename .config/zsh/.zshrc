@@ -28,9 +28,12 @@ zstyle ':fzf-tab:*' use-fzf-default-opts yes
 zle -N edit-command-line
 bindkey '^E' edit-command-line
 
+date 
 PROMPT='
-[ %(!.%F{red}%n%f.%F{039}%n%f) ] %F{red}%~%f $(git_branch)%F{119}%?%f %F{105}%h%f
+ %F{red}%~%f $(git_branch)%F{119}%?%f %F{105}%h%f
 %# '
 
 plug https://github.com/zsh-users/zsh-syntax-highlighting.git zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 plug https://github.com/Aloxaf/fzf-tab fzf-tab/fzf-tab.plugin.zsh
+source <(fzf --zsh)
+( cat ~/.cache/wal/sequences & )

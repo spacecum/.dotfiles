@@ -13,3 +13,8 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 	pattern = "/home/Mani/.dotfiles/.config/hypr/*.conf",
 	command = "!hyprctl reload all"
 })
+
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+-- 	pattern = "/home/Mani/.dotfiles/.config/nvim/*",
+-- 	command = ":source"
+-- })
