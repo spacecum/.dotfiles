@@ -36,4 +36,3 @@ PROMPT='
 plug https://github.com/zsh-users/zsh-syntax-highlighting.git zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 plug https://github.com/Aloxaf/fzf-tab fzf-tab/fzf-tab.plugin.zsh
 source <(fzf --zsh)
-( cat ~/.cache/wal/sequences & )

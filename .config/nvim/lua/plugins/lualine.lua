@@ -4,38 +4,19 @@ return {
 		require('lualine').setup({
 			options = {
 				globalstatus = true,
-				component_separators = { left = ' ▏', right = ' ▏'},
-				section_separators = { left = ' ▏', right = ' ▏'},
 			},
-			events = {
-				'WinEnter',
-				'BufEnter',
-				'BufWritePost',
-				'SessionLoadPost',
-				'FileChangedShellPost',
-				'VimResized',
-				'Filetype',
-				'CursorMoved',
-				'CursorMovedI',
-				'ModeChanged',
-				'RecordingLeave',
-				'RecordingEnter',
+
+			tabline = {
+				lualine_a = { 'mode' },
+				lualine_b = {'branch','diff','diagnostics'},
+				lualine_c = {'filename'},
+				lualine_x = {'encoding','fileformat','filetype'},
+				lualine_y = {'progress'},
+				lualine_z = {'location'}
 			},
-			sections = {
-				lualine_a = {
-					'mode',
-					{
-						'macro',
-						fmt = function()
-							local reg = vim.fn.reg_recording()
-							if reg == "" then return nil end
-							return "Recording @" .. reg
-						end,
-						color = { fg = "#ff9e64" },
-						draw_empty = false,
-					}
-				},
-			},
+
+			sections = {},
+			inactive_sections = {},
 		})
 	end
 }

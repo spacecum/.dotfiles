@@ -15,15 +15,9 @@ vim.o.clipboard = "unnamedplus"
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
--- cursor line
---vim.o.cursorline = true
-
 -- split window
 vim.o.splitright = true
 vim.o.splitbelow = true
-
--- Theme
--- vim.cmd[[colorscheme cyberdream]]
 
 -- Removing ~
 vim.opt.fillchars:append { eob = " " }
@@ -34,13 +28,28 @@ vim.opt.fillchars:append { eob = " " }
 vim.o.undofile = true
 
 -- Removing space below statusline
-vim.o.cmdheight = 0
+-- vim.o.cmdheight = 0
 
 -- Wordwrap
 vim.o.linebreak = true
 
 -- Minimum number of lines to keep above and below the cursor
--- vim.o.scrolloff = 999
+vim.o.scrolloff = 4
 
 -- change the cwd inside of the nvim
 vim.o.autochdir = true
+
+-- Remove mode info
+vim.o.showmode = false
+vim.o.laststatus = 0
+
+-- vim.opt.fillchars:append({
+--   horiz = "─",
+--   horizup = "┴",
+--   horizdown = "┬",
+--   vert = "│",
+--   vertleft = "┤",
+--   vertright = "├",
+--   verthoriz = "┼",
+-- })
+vim.opt.winborder = "rounded"
