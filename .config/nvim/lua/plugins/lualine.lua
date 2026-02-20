@@ -8,11 +8,19 @@ return {
 
 			tabline = {
 				lualine_a = { 'mode' },
-				lualine_b = {'branch','diff','diagnostics'},
-				lualine_c = {'filename'},
-				lualine_x = {'encoding','fileformat','filetype'},
-				lualine_y = {'progress'},
-				lualine_z = {'location'}
+				lualine_b = {'filename'},
+				lualine_y = {'branch','diff','diagnostics'},
+			},
+
+			events = {
+            'WinEnter',
+            'BufEnter',
+            'BufWritePost',
+            'SessionLoadPost',
+            'FileChangedShellPost',
+            'VimResized',
+            'Filetype',
+            'ModeChanged',
 			},
 
 			sections = {},

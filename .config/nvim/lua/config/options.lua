@@ -42,14 +42,7 @@ vim.o.autochdir = true
 -- Remove mode info
 vim.o.showmode = false
 vim.o.laststatus = 0
+vim.o.statusline = "%{repeat('─',winwidth('.'))}" -- Fix statusline showing in horizontal window splits
 
--- vim.opt.fillchars:append({
---   horiz = "─",
---   horizup = "┴",
---   horizdown = "┬",
---   vert = "│",
---   vertleft = "┤",
---   vertright = "├",
---   verthoriz = "┼",
--- })
+-- Borders
 vim.opt.winborder = "rounded"

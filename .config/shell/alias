@@ -12,9 +12,8 @@ alias mv='mv -v'
 alias cp='cp -v'
 
 alias v='nvim'
-alias nt='nvim -c terminal'
 
-alias f='fzf --bind "enter:become(nvim {})"'
+alias f='fzf --bind "enter:become(nvim {})" --preview "bat {} --color=always"'
 alias sudo='sudo '
 alias py='python'
 alias o='xdg-open'
@@ -28,6 +27,5 @@ unalias run-help
 alias help='run-help'
 
 alias weather="curl wttr.in/"
-alias space='astroterm --fps 60 --unicode --metadata --color --city '
 
 alias -g CP='| wl-copy'
