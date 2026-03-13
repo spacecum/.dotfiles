@@ -1,4 +1,4 @@
 .git
 commit_msg
-/.config/zsh/.zcompdump
-/.config/zsh/plugins/
+.config/zsh/.zcompdump
+.config/zsh/plugins/
