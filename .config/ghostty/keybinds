@@ -1,11 +1,62 @@
 # Delete default keybindings
 keybind=clear
 
-# Vim mode for ghostty is just around the corner. March-Arpil
+# Entry point
+keybind = ctrl+g=activate_key_table:normal
+
+# Key table definition
+keybind = normal/
+
+# Line movement
+keybind = normal/j=scroll_page_lines:1
+keybind = normal/k=scroll_page_lines:-1
+
+# Page movement
+keybind = normal/ctrl+d=scroll_page_fractional:0.5
+keybind = normal/ctrl+u=scroll_page_fractional:-0.5
+keybind = normal/ctrl+f=scroll_page_down
+keybind = normal/ctrl+b=scroll_page_up
+
+# Jump to top/bottom
+keybind = normal/g>g=scroll_to_top
+keybind = normal/shift+g=scroll_to_bottom
+
+# Search
+keybind = normal/slash=start_search
+keybind = normal/n=navigate_search:next
+
+# Copy mode / selection
+# Note we're missing a lot of actions here to make this more full featured.
+keybind = normal/y=copy_to_clipboard
+keybind = normal/p=paste_from_clipboard
+
+# Command Palette
+keybind = normal/shift+semicolon=toggle_command_palette
+
+# Exit
+keybind = normal/escape=deactivate_key_table
+keybind = normal/i=deactivate_key_table
+
+# Catch unbound keys
+keybind = normal/catch_all=ignore
+
+keybind = normal/r=deactivate_key_table
+keybind = chain=activate_key_table:resize
+
+keybind = resize/
+keybind = resize/i=deactivate_key_table
+keybind = resize/equal=equalize_splits
+keybind = resize/h=resize_split:left,10
+keybind = resize/j=resize_split:down,10
+keybind = resize/k=resize_split:up,10
+keybind = resize/l=resize_split:right,10
+keybind = resize/catch_all=ignore
+
+keybind = resize/n=deactivate_key_table
+keybind = chain=activate_key_table:normal
 
 # Configuration
-# Not working for some reason on hyprland
-keybind = ctrl+comma=open_config 
+keybind = ctrl+comma=open_config
 keybind = ctrl+shift+comma=reload_config
 
 # Create splits, windows, and tabs
@@ -14,17 +65,8 @@ keybind = ctrl+s>h=new_split:left
 keybind = ctrl+s>j=new_split:down
 keybind = ctrl+s>k=new_split:up
 keybind = ctrl+s>l=new_split:right
-
 keybind = ctrl+s>t=new_tab
 keybind = ctrl+s>n=new_window
-
-# Manage splits
-keybind = ctrl+s>equal=equalize_splits
-
-keybind = ctrl+shift+h=resize_split:left,20
-keybind = ctrl+shift+j=resize_split:down,20
-keybind = ctrl+shift+k=resize_split:up,20
-keybind = ctrl+shift+l=resize_split:right,20
 
 # Window Management
 keybind = ctrl+s>m=toggle_maximize
