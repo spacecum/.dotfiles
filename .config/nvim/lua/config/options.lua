@@ -27,9 +27,6 @@ vim.opt.fillchars:append { eob = " " }
 -- undo across session
 vim.o.undofile = true
 
--- Removing space below statusline
--- vim.o.cmdheight = 0
-
 -- Wordwrap
 vim.o.linebreak = true
 
@@ -39,10 +36,11 @@ vim.o.scrolloff = 4
 -- change the cwd inside of the nvim
 vim.o.autochdir = true
 
--- Remove mode info
-vim.o.showmode = false
-vim.o.laststatus = 0
-vim.o.statusline = "%{repeat('─',winwidth('.'))}" -- Fix statusline showing in horizontal window splits
+-- statusline
+vim.o.laststatus = 3
+-- vim.o.statusline = "%{repeat('─',winwidth('.'))}" -- Fix statusline showing in horizontal window splits
+-- vim.o.showmode = true
+-- qvim.o.cmdheight = 0
 
 -- Borders
 vim.opt.winborder = "rounded"
