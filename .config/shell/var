@@ -24,5 +24,5 @@ export SYSTEMD_PAGERSECURE=1
 export PAGER=bat
 
 export FZF_DEFAULT_OPTS='--color=16'
-export BAT_THEME='base16-256'
+# export BAT_THEME='base16-256'
 export KEYTIMEOUT=1
